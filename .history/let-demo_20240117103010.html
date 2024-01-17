@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>ECMA Script</title>  
+        <style>
+            #block {
+                display: flex;
+                justify-content: space-around;
+            }
+            #block > div {
+                height: 50px;
+                width: 50px;
+                color: blueviolet;
+            }
+        </style>  
+    </head>
+    <body>
+        <h1>Demo Let</h1>
+        <div id="block"></div>
+        <script type="text/javascript">
+            var topic = "Javascript";
+            if (topic) {
+                let topic = "ECMA Script";
+                console.log('Block '+topic);
+            }
+            console.log('Global '+ topic);
+
+            var div;
+            var block = document.getElementById('block');
+                for ( var i=0; i<5 ; i++) {
+                    div = document.createElement('div');
+                    div.onclick = function() {
+                        alert ("This is box # "+ i);
+                    }
+                    block.appendChild(div);
+                }
+        </script>
+    </body>        
+</html>
